@@ -1,0 +1,363 @@
+---
+
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="panel">
+        <h1 class="hero-title asian-food">
+          <span>Asian</span>
+          <span>Food</span>
+        </h1>
+        <h1 class="asian-food">
+          <span>Asian</span>
+          <span>Food</span>
+        </h1>
+      </div>
+      <div class="hero-slogan">
+        <h2>Un poco de <span>asia</span> en cada bocado</h2>
+      </div>
+    </div>
+    <section class="hero-objetivo">
+      <h3>Objetivo del proyecto</h3>
+      <aside>
+        <p>
+          Promover y difundir la diversidad culinaria <em>asiática</em> en la ciudad de <b>Tuxtla Gutiérrez, Chiapas</b
+          >, mediante la destacada presentación de los restaurantes locales especializados en esta gastronomía
+        </p>
+      </aside>
+    </section>
+    <section class="hero-restaurantes">
+      <h3>Restaurantes</h3>
+      <p>Conoce los restaurantes que ofrecen comida asiática en Tuxtla Gutiérrez, Chiapas</p>
+    </section>
+    <section class="hero-cards">
+      <div class="card">
+        <div class="card-image">
+          <img src="/sushiitto.jpg" alt="Logo restaurante" />
+        </div>
+        <div class="card-contenido">
+          <h2>Sushiitto</h2>
+          <p>Somos más que comida japonesa, creamos sushi con el corazón combinándolo con ingredientes occidentales</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="/kabuki.jpg" alt="Logo restaurante" />
+        </div>
+        <div class="card-contenido">
+          <h2>Kabuki</h2>
+          <p>
+            Somos una empresa Chiapaneca que tiene como compromiso ante nuestros clientes, ofrecer lo mejor de la
+            gastronomía japonesa, trabajamos arduamente para brindarles una experiencia culinaria inolvidable
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="/sensei_bar.jpg" alt="Logo restaurante" />
+        </div>
+        <div class="card-contenido">
+          <h2>Sensei Sushi Bar</h2>
+          <p>La exquisita fusión entre comida japonesa y mexicana y la coctelería internacional mas deliciosa</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="/hongkong.jpg" alt="Logo restaurante" />
+        </div>
+        <div class="card-contenido">
+          <h2>Hong Kong</h2>
+          <p>"Tradición y sabor de la auténtica cocina china"</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel {
+      overflow: auto;
+      width: 100%;
+      height: 280px;
+      position: relative;
+      background: radial-gradient(circle, var(--secondary-color) 15%, var(--secondary-color));
+    }
+
+    .asian-food {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 80px;
+      color: var(--text-color);
+      line-height: 0.85;
+      text-transform: uppercase;
+      -webkit-text-fill-color: rgba(white, 0.1);
+      -webkit-background-clip: text;
+      z-index: 10;
+    }
+
+    .asian-food::before {
+      content: '中国';
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+      color: var(--text-color);
+      -webkit-text-fill-color: var(--main-color);
+      -webkit-background-clip: none;
+      padding: 3px;
+    }
+
+    .asian-food + .asian-food {
+      -webkit-text-fill-color: var(--main-color);
+      z-index: 20;
+      animation: meh 3s ease-out infinite alternate;
+    }
+
+    @keyframes meh {
+      from {
+        clip-path: polygon(100% 0, 100% 100%, 20% 100%, 61% 91%, 94% 47%);
+      }
+
+      50% {
+        clip-path: polygon(100% 0, 100% 100%, 20% 100%, 59% 52%, 74% 13%);
+      }
+
+      to {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 85%, 87% 41%);
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    .hero-slogan {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-slogan h2 {
+      font-size: 24px;
+      color: var(--text-color);
+      text-align: center;
+      letter-spacing: 6px;
+      font-family: monospace;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2s steps(11);
+      text-transform: capitalize;
+      /* cursor 0.4s step-end infinite alternate; */
+    }
+
+    .hero-slogan span {
+      color: var(--main-color);
+      text-transform: uppercase;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    /* Objetivo */
+    .hero-objetivo {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .hero-objetivo h3 {
+      font-size: 28px;
+      color: var(--main-color);
+    }
+
+    .hero-objetivo p {
+      font-size: 16px;
+      color: var(--text-color);
+      text-align: justify;
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    /* RESTAURANTE */
+    .hero-restaurantes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .hero-restaurantes h3 {
+      font-size: 28px;
+      color: var(--main-color);
+      font-weight: bold;
+    }
+
+    .hero-restaurantes p {
+      font-size: 16px;
+      color: var(--text-color);
+      text-align: justify;
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      row-gap: 60px;
+      position: relative;
+      margin-top: 70px;
+    }
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 300px;
+      background-color: #eee;
+      border-radius: 20px;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+      transition: 0.5s;
+      position: relative;
+    }
+
+    .hero-cards .card:hover {
+      height: 400px;
+    }
+
+    .hero-cards .card .card-image {
+      position: absolute;
+      top: 20px;
+      width: 300px;
+      height: 220px;
+      background-color: #333;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .hero-cards .card:hover .card-image {
+      top: -100px;
+      scale: 0.75;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-cards .card .card-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-cards .card .card-contenido {
+      position: absolute;
+      width: 100%;
+      padding: 0 30px;
+      text-align: center;
+      top: 252px;
+      height: 35px;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .hero-cards .card:hover .card-contenido {
+      height: 250px;
+      top: 150px;
+    }
+
+    .hero-cards .card .card-contenido h2 {
+      font-size: 30px;
+      color: var(--main-color);
+    }
+
+    .hero-cards .card .card-contenido p {
+      font-size: 16px;
+      font-family: monospace;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    /* MEDIA QUEARYS */
+    @media (min-width: 768px) {
+      .hero-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .panel {
+        height: 500px;
+        width: 100%;
+      }
+
+      .asian-food {
+        font-size: 15vmin;
+      }
+
+      .hero-slogan h2 {
+        font-size: 30px;
+        letter-spacing: 5px;
+        text-align: center;
+        color: var(--text-color);
+        animation: none;
+      }
+
+      .hero-objetivo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-objetivo h3 {
+        font-size: 38px;
+        color: var(--main-color);
+        font-weight: bold;
+        width: 100%;
+      }
+
+      .hero-objetivo p {
+        color: var(--text-color);
+        font-size: 20px;
+        text-align: justify;
+        width: 100%;
+      }
+
+      .hero-restaurantes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-restaurantes p {
+        font-size: 20px;
+        color: var(--text-color);
+        text-align: center;
+      }
+
+      .hero-cards {
+        column-gap: 40px;
+      }
+    }
+  </style>
+</section>

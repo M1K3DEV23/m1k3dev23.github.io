@@ -1,0 +1,101 @@
+---
+
+---
+
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="/Logo.jpg" alt="Logotipo de ASIAN FOOD" />
+    </a>
+    <nav class="navbar">
+      <a href="/">Inicio</a>
+      <a href="/video">Video</a>
+      <a href="/estadistica">Estadisticas</a>
+      <a href="/acerca">Acerca</a>
+    </nav>
+    <a class="btn" href="/encuesta">Encuesta</a>
+  </div>
+</header>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  .navbar a:hover {
+    color: var(--main-color);
+    border: none;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: var(--terceary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo img {
+      /* margin-top: 2px; */
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+    }
+
+    .navbar {
+      flex-direction: row;
+    }
+
+    .navbar a {
+      font-size: 20px;
+      margin: 0 32px;
+    }
+  }
+</style>
